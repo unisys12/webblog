@@ -42,7 +42,7 @@ TEMPLATE_DIR=${OPENSHIFT_REPO_DIR}/.openshift/tmpl
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_nginx
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_php_libs
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_php
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_phaclon
+source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_phalcon
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_node
 
 # Check nginx
