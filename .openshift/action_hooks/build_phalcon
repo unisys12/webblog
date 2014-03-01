@@ -16,8 +16,7 @@ function download_phalcon() {
 }
 
 function build_phalcon() {
-	# Check for Phalcon first
-	check_phalcon
+
 	# Install PhalconPHP
 	echo "Installing Phalcon!"
 	# Change user permissions on 'install' file to allow it to be run
