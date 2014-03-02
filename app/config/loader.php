@@ -10,6 +10,6 @@ $loader->registerDirs(
         $config->application->controllersDir,
         $config->application->modelsDir,
         $config->application->libraryDir,
-        $config->application->vendorDir // same as require statement above ???
+        //$config->application->vendorDir // same as require statement above ???
     )
 )->register();
