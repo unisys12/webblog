@@ -1,3 +1,20 @@
+events {
+  # When you need > 8000 * cpu_cores connections, you start optimizing
+  # your OS, and this is probably the point at where you hire people
+  # who are smarter than you, this is *a lot* of requests.
+  worker_connections  8000;
+
+  # This sets up some smart queueing for accept(2)'ing requests
+  # Set it to "on" if you have > worker_processes
+  accept_mutex off;
+
+  # These settings are OS specific, by defualt Nginx uses select(2),
+  # however, for a large number of requests epoll(2) and kqueue(2)
+  # are generally faster than the default (select(2))
+  # use epoll; # enable for Linux 2.6+
+  # use kqueue; # enable for *BSD (FreeBSD, OS X, ..)
+}
+
 http {
 
 # Enable Gzip
