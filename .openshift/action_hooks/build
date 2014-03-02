@@ -23,8 +23,6 @@ ICU_VERSION='51.2'
 LIBMCRYPT_VERSION='2.5.8'
 LIBTOOL_VERSION='2.4.2'
 
-PHALCON_VERSION='1.2.6'
-
 NODE_VERSION='0.10.26' #'0.10.26'
 
 declare -A PHP_PECL
@@ -42,7 +40,6 @@ TEMPLATE_DIR=${OPENSHIFT_REPO_DIR}/.openshift/tmpl
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_nginx
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_php_libs
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_php
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_phalcon
 source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_node
 
 # Check nginx
@@ -55,9 +52,6 @@ check_php
 for ext in "${!PHP_PECL[@]}"; do
     check_pecl ${ext} ${PHP_PECL["$ext"]} ${PHP_PECL_CONFIGURE["$ext"]};
 done
-
-# Check Phalcon
-check_phalcon
 
 # Check NodeJS
 check_node
