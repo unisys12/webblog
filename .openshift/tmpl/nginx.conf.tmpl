@@ -118,7 +118,6 @@ http {
                   rewrite ^(.+)$ /index.php?_url=/$1 last;
                   break;
               }
-          }
         }
 
         location = /robots.txt  { access_log off; log_not_found off; }
