@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+SRC_DIR="`pwd`"
+cd "`dirname "$0"`"
+cd "../jeremykendall/password-validator/bin"
+BIN_TARGET="`pwd`/version-check"
+cd "$SRC_DIR"
+"$BIN_TARGET" "$@"
