@@ -11,7 +11,6 @@
 <body>
 	<div class="main">
 		<h1>Your Content Has Safely Been Removed!</h1>
-		<p><?php echo $OPENSHIFT_MYSQL_DB_HOST ?> </p>
 	</div>
 	<script src=""></script>
 </body>
