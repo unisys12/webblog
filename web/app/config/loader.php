@@ -1,6 +1,6 @@
 <?php
 
-require '/../../vendor/autoload.php';
+require 'app/vendor/autoload.php';
 
 $loader = new \Phalcon\Loader();
 
