@@ -37,7 +37,7 @@ check_phalcon() {
 	# Location of phalcon.so, which will only be located here if it has been built
 	local so_dir=./diy/runtime/php5/lib/php/extensions/no-debug-non-zts-20121212/
 
-	if [[ -f ${so_dir}/phalcon.so ]];then
+	if [[ -f $so_dir/phalcon.so ]];then
 		echo "Phalcon v${PHALCON_VERSION} already installed"
 	else
 		echo "Phalcon not installed... let's do that now!"
