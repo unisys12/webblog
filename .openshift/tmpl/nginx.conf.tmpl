@@ -54,7 +54,7 @@ http {
 
     access_log  ${OPENSHIFT_DIY_LOG_DIR}/access.log;
 
-    set $root_path '${OPENSHIFT_REPO_DIR}/web/';
+    set $root_path '${OPENSHIFT_REPO_DIR}/web/public';
 
     location / {
         root   $root_path;
@@ -80,8 +80,8 @@ http {
 
         include fastcgi_params;
         fastcgi_split_path_info       ^(.+\.php)(/.+)$;
-        fastcgi_param PATH_INFO       $fastcgi_path_info;
-        fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
+        fastcgi_param PATH_INFO       $fastcgi_split_path_info;
+        fastcgi_param PATH_TRANSLATED $document_root$fastcgi_split_path_info;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 
