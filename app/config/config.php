@@ -3,10 +3,10 @@
 return new \Phalcon\Config(array(
     'database' => array(
         'adapter'     => 'Mysql',
-        'host'        => 'localhost',
-        'username'    => 'root',
-        'password'    => '',
-        'dbname'      => 'blog-local',
+        'host'        => '$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT',
+        'username'    => 'adminiN2VAtr',
+        'password'    => 'e3bZA7iyrV5V',
+        'dbname'      => 'blog',
     ),
     'application' => array(
         'controllersDir' => __DIR__ . '/../../app/controllers/',
