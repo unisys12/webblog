@@ -1,0 +1,7 @@
+{
+	"require" : {
+		"erusev/parsedown": "dev-master",
+
+		"jeremykendall/password-validator": "dev-master"
+	}
+}

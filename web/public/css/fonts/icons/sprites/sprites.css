@@ -1,0 +1,35 @@
+[class*="icon-"] {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-image: url(sprites.svg);
+	background-repeat: no-repeat;
+}
+.icon-google plus {
+	background-position: 0 0;
+	width: 32px;
+}
+.icon-twitter {
+	background-position: -48px 0;
+	width: 32px;
+}
+.icon-github {
+	background-position: -96px 0;
+	width: 32px;
+}
+.icon-IcoMoon {
+	background-position: -144px 0;
+	width: 32px;
+}
+.icon-enter {
+	background-position: -192px 0;
+	width: 32px;
+}
+.icon-exit {
+	background-position: -240px 0;
+	width: 32px;
+}
+.icon-mail {
+	background-position: -288px 0;
+	width: 32px;
+}
