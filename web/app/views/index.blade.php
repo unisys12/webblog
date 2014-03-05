@@ -14,7 +14,7 @@ Blog
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		{{$$post->post_content}}
+		{{ $post->post_content }}
 	</article>
 	@endforeach
 </main>
