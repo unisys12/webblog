@@ -15,9 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showIndex()
 	{
-		return View::make('hello');
+		$posts = Post::all();
+		return View::make('index')->with('posts', $posts);
 	}
 
 }

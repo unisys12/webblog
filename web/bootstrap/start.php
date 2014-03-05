@@ -26,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('localhost'),
-	'host'	=> array('http://blog-unisys12.rhcloud.com/')
+	'local' => array('PHILLIP-HP'),
+	'host'  => array('OPENSHFIT_HOSTNAME'),
 
 ));
 

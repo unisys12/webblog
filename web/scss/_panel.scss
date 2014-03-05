@@ -1,0 +1,18 @@
+.panel {
+	float: right;
+	max-width: 100%;
+	width: 85%;
+
+	ul > li {
+		list-style-type: none;
+
+		input[type="text"] {
+			margin-bottom: 1.5em;
+		}
+	}
+}
+
+.menu {
+	max-width: 100%;
+	width: 15%;
+}

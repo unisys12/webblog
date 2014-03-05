@@ -1,0 +1,29 @@
+{
+  "name": "Fluid_Grid",
+  "version": "0.0.1",
+  "homepage": "https://github.com/unisys12/Fluid_Grid",
+  "authors": [
+    "unisys12 <unisys12@gmail.com>"
+  ],
+  "description": "Personal Use Fluid Grid",
+  "main": "/public/index.html",
+  "keywords": [
+    "fluid",
+    "grid",
+    "scss",
+    "sass"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.0"
+  }
+}
