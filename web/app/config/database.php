@@ -54,7 +54,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '$OPENSHFIT_DIY_DB_HOST',
+			'host'      => {{ $OPENSHFIT_DIY_DB_HOST }},
 			'database'  => 'blog_local',
 			'username'  => 'adminiN2VAtr',
 			'password'  => 'e3bZA7iyrV5V',
