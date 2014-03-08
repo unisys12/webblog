@@ -25,10 +25,7 @@ $app = new Illuminate\Foundation\Application;
 */
 
 $env = $app->detectEnvironment(array(
-
 	'local' => array('PHILLIP-HP'),
-	'host'  => array('OPENSHFIT_HOSTNAME'),
-
 ));
 
 /*

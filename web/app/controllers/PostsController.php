@@ -38,6 +38,10 @@ class PostsController extends \BaseController {
 	{
 		$data = Input::all();
 		$post = Post::create($data);
+
+		if($post){
+			return Redirect::action('HomeController@showIndex');
+		}
 	}
 
 	/**
@@ -48,19 +52,25 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$post = Post::findFirst($id);
-		return View::make('post.show')->with('post', $post);
+		$post = $this->post->findOrFail($id);
+
+		$content = Parsedown::instance()->parse($post->post_content);
+
+		return View::make('post.show')->with('post', $post)
+									  ->with('content', $content)
+									  ->with('title', $id);
 	}
 
 	/**
 	 * Show the form for editing the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  string  $id
 	 * @return Response
 	 */
 	public function edit($id)
 	{
-		$post = Post::findFirst($id);
+		$post = $this->post->findOrFail($id);
+		return View::make('post.edit')->with('post', $post);
 	}
 
 	/**
@@ -71,7 +81,19 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$post = $this->post->findOrFail($id);
+
+		$changes = Input::all();
+		$post->update($changes);
+
+		if($post->update($changes)){
+			$content = Parsedown::instance()->parse($post->post_content);
+			return View::make('post.show')->with('post', $post)
+										  ->with('content', $content)
+										  ->with('title', $id);
+		}else{
+			return View::make('post.edit', array('post' => $this->$post, 'id' => $id));
+		}
 	}
 
 	/**

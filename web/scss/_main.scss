@@ -1,8 +1,3 @@
-body {
-	//background-color: darken(#A62D00, 10%);
-	//background: linear-gradient(-90deg, lighten(#A62D00, 25%), lighten(#A62D00, 10%), lighten(#A62D00, 25%));
-}
-
 .container {
 	@extend %clearfix;
 	padding: 0 3em 3em 3em;
@@ -70,13 +65,22 @@ body {
 }
 
 .post_content {
-	font-family: 'source_sans_proregular', sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	height: auto;
+	margin: 0 auto;
 	padding: 15px;
 	color: $text;
+	background-color: #999;
 	@include post_links;
 	border: 1px solid rgba(0,0,0,0.3);
 	@include box-shadow();
 	border-radius: 3px;
+}
+
+.post_tags {
+	@extend .post_desc;
+	margin-bottom: 3.5em;
 }
 
 .adds {

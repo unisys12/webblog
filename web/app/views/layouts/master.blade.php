@@ -19,14 +19,14 @@
 					<li> {{ link_to('about', 'About Me') }} </li>
 				</ul>
 			</nav>
-			<div class="moto"><p>My adventures, trials, tribulations of learning web development as a hobby! I mean... who does that?</p></div>
+			<div class="moto"><p>My adventures, trials &amp; tribulations of learning web development as a hobby! I mean... who does that?</p></div>
 		</div>
 		<hr>
 		@yield('content')
 		<aside class="adds">
 			<div class="search">
 				<form action="post">
-					<input type="search">
+					<input type="search" placeholder="Doesn't Work!">
 					<button class="button">Search</button>
 				</form>
 			</div>

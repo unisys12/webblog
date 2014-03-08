@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration {
 			$table->increments('id');
 			$table->string('post_title')->unique();
 			$table->string('post_desc')->unique();
-			$table->string('post_content');
+			$table->text('post_content');
 			$table->integer('post_author');
 			$table->string('post_tags');
 			$table->timestamps();

@@ -1,25 +1,27 @@
-@extends('layouts.master')
+@extends('layouts.post')
 
 @section('title')
-Blog
+{{ $post->post_title }}
 @stop
 
 @section('content')
 
-<main class="posts">
-	@foreach ($posts as $post)
+<main class="post">
 	<header class="post_header">
-		<h3 class="post_title"><a href= "{{ url('posts') }}/{{ $post->id }}">{{ $post->post_title }}</a></h3>
+		<h3 class="post_title">{{ $post->post_title }}</h3>
 		<span class="post_details"><small>{{ $post->post_author }} - {{ $post->created_at }}</small></span>
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		{{ Parsedown::instance()->parse($post->post_content) }}
+		{{ $content }}
 	</article>
-	<section class="post_tags">
+	<section class="post_details">
 		<small> {{ $post->post_tags }} </small>
 	</section>
-	@endforeach
 </main>
 
+@stop
+
+@section('scriptblock')
+<script src="{{ url('js/prism.js') }}"></script>
 @stop
