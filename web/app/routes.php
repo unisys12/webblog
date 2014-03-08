@@ -20,10 +20,8 @@ Route::get('/login', function()
 
 Route::post('/login', function()
 {
-	$data = array(
-		'user_username' => Input::get('username'),
-		'user_password' => Input::get('password')
-	);
+	$user_username = Input::get('username');
+	$user_password = Input::get('password');
 
 	$rules = array(
 		'user_username' => 'required',
@@ -42,7 +40,7 @@ Route::post('/login', function()
 			->withInput();
 	}
 
-	if(Auth::attempt($data['user_name'], $data['user_password']))
+	if(Auth::attempt(array('username' => $user_name, 'password' => $user_password))
 	{
 
 		return Redirect::to('/');
