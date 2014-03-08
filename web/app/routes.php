@@ -40,7 +40,7 @@ Route::post('/login', function()
 			->withInput();
 	}
 
-	if(Auth::attempt(array('username' => $user_name, 'password' => $user_password))
+	if(Auth::attempt(array('username' => $user_name, 'password' => $user_password)))
 	{
 
 		return Redirect::to('/');
