@@ -24,11 +24,11 @@ Route::post('/login', function()
 	$user_password = Input::get('password');
 
 	$rules = array(
-		'user_username' => 'required',
-		'user_password' => 'required'
+		'username' => 'required',
+		'password' => 'required'
 	);
 
-	$validate = Validator::make($data, $rules);
+	$validate = Validator::make(array('username' => $user_name, 'password' => $user_password), $rules);
 
 	if($validate->fails())
 	{
