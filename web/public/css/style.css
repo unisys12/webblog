@@ -532,7 +532,7 @@ th {
   margin: 0 auto;
   padding: 15px;
   color: #111111;
-  background-color: #999;
+  background-color: lightgray;
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
   border-radius: 3px; }

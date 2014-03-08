@@ -71,7 +71,7 @@
 	margin: 0 auto;
 	padding: 15px;
 	color: $text;
-	background-color: #999;
+	background-color: lightgray;
 	@include post_links;
 	border: 1px solid rgba(0,0,0,0.3);
 	@include box-shadow();
