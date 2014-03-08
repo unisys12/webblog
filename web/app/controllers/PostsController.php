@@ -5,6 +5,8 @@ class PostsController extends \BaseController {
 	public function __construct(Post $post)
 	{
 		$this->post = $post;
+		$this->beforeFilter('csrf', array('on' => 'post'));
+		$this->beforeFilter('auth', array('except' => 'show'));
 	}
 
 	/**

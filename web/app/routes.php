@@ -11,8 +11,44 @@
 |
 */
 
-
-
 Route::get('/', 'HomeController@showIndex');
+
+Route::get('/login', function()
+{
+	return View::make('user/login');
+});
+
+Route::post('/login', function()
+{
+	$data = array(
+		'user_username' => Input::get('username'),
+		'user_password' => Input::get('password')
+	);
+
+	$rules = array(
+		'user_username' => 'required',
+		'user_password' => 'required'
+	);
+
+	$validate = Validator::make($data, $rules);
+
+	if($validate->fails())
+	{
+
+		$msg = $validate->messages();
+
+		return Redirect::to('/')
+			->withErrors($msg)
+			->withInput();
+	}
+
+	if(Auth::attempt($data))
+	{
+
+		return Redirect::to('/');
+	}
+
+	return Redirect::to('/login')->with('message', 'Username and Password do not match');
+});
 
 Route::resource('posts', 'PostsController');
