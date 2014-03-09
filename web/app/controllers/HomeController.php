@@ -27,8 +27,7 @@ class HomeController extends BaseController {
 			$content = Parsedown::instance()->parse($post->post_content);
 		}
 
-		return View::make('index')->with('posts', $posts)
-								  ->with('content', substr($content, 0, 500));
+		return View::make('index')->with('posts', $posts)->with('content', substr($content, 0, 500));
 	}
 
 }
