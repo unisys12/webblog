@@ -2,21 +2,10 @@
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
 
 	public function showIndex()
 	{
+		protected $content;
 		$posts = Post::all();
 
 		// Loop through the posts results;
@@ -26,8 +15,6 @@ class HomeController extends BaseController {
 		foreach ($posts as $post) {
 			$content = Parsedown::instance()->parse($post->post_content);
 		}
-
-		dd($content);
 
 		return View::make('index')->with('posts', $posts)->with('content', $content);
 	}
