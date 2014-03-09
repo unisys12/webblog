@@ -5,7 +5,7 @@ class HomeController extends BaseController {
 
 	public function showIndex()
 	{
-		protected $content;
+		$content;
 		$posts = Post::all();
 
 		// Loop through the posts results;
