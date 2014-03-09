@@ -14,7 +14,7 @@ Blog
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		@foreach ($post->content as $content)
+		@foreach ($post->post_content as $content)
 			{{ Parsedown::instance()->parse($content) }}
 		@endforeach
 	</article>
