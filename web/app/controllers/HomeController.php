@@ -25,6 +25,7 @@ class HomeController extends BaseController {
 		// 500 characters of content;
 		foreach ($posts as $post) {
 			$content = Parsedown::instance()->parse($post->post_content);
+			dd($content);
 		}
 
 		return View::make('index')->with('posts', $posts)->with('content', $content);
