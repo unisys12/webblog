@@ -38,7 +38,7 @@ Route::post('/login', function()
 
 		$msg = $validate->messages();
 
-		return Redirect::to('/')
+		return Redirect::to('/login')
 			->withErrors($msg)
 			->withInput();
 	}
