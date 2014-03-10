@@ -23,6 +23,8 @@ Route::post('/login', function()
 {
 	$data = Input::except('_token');
 
+	dd($data);
+
 	$rules = array(
 		'username' => 'required',
 		'password' => 'required'
