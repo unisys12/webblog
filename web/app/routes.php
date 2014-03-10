@@ -21,7 +21,7 @@ Route::get('/login', function()
 
 Route::post('/login', function()
 {
-	$data = Input::all();
+	$data = Input::except('_token');
 
 	$rules = array(
 		'username' => 'required',
