@@ -21,7 +21,7 @@ Route::get('/login', function()
 
 Route::post('/login', function()
 {
-	$data = Input::except('_token');
+	$data = Input::except('_token', '_url');
 
 	dd($data);
 
