@@ -21,14 +21,11 @@ Route::get('/login', function()
 
 Route::post('/login', function()
 {
-	$data = array(
-		'user_username' => Input::get('username'),
-		'user_password' => Input::get('password')
-	);
+	$data = Input::except('_token');
 
 	$rules = array(
-		'user_username' => 'required',
-		'user_password' => 'required'
+		'username' => 'required',
+		'password' => 'required'
 	);
 
 	$validate = Validator::make($data, $rules);
@@ -45,12 +42,10 @@ Route::post('/login', function()
 
 	if(Auth::attempt($data))
 	{
-		Session::regenerate();
-		Session::put('username', $data['user_username']);
 		return Redirect::intended('user.profile');
 	}
 
-	return Redirect::to('/')->with('message', 'Username and Password do not match');
+	return Redirect::to('/login')->with('message', 'Username and Password do not match');
 });
 
 Route::resource('posts', 'PostsController');
