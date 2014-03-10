@@ -27,8 +27,8 @@ Route::post('/login', function()
 	);
 
 	$rules = array(
-		'username' => 'required',
-		'password' => 'required'
+		'user_username' => 'required',
+		'user_password' => 'required'
 	);
 
 	$validate = Validator::make($data, $rules);
