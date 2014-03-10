@@ -47,7 +47,7 @@ Route::post('/login', function()
 	{
 		Session::regenerate();
 		Session::put('username', $data['user_username']);
-		return Redirect::route('user.index');
+		return Redirect::intended('user.profile');
 	}
 
 	return Redirect::to('/')->with('message', 'Username and Password do not match');
