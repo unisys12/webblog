@@ -6,7 +6,7 @@ Blog
 
 @section('content')
 
-{{ Form::open(['url' => '/login']) }}
+{{ Form::open(array('url' => '/login')) }}
 <ul>
 <li>{{ Form::label('username', 'Username:') }}</li>
 <li>{{ Form::text('username') }}</li>
