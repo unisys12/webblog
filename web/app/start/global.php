@@ -89,4 +89,4 @@ require app_path().'/filters.php';
 |
 */
 
-require __DIR__."/../../vendor/erusev/parsedown/Parsedown.php";
+require __DIR__.'/../../vendor/erusev/parsedown/Parsedown.php';
