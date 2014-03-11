@@ -7,7 +7,9 @@ class HomeController extends BaseController {
 	{
 		$posts = Post::all();
 
-		return View::make('index')->with('posts', $posts);
+		$content = Post::parsePostContent();
+
+		return View::make('index')->with('posts', $posts)->with('content', $content);
 	}
 
 }
