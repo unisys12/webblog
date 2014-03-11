@@ -79,3 +79,14 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|-------------------------------------------------------------
+| Load Parsedown
+|-------------------------------------------------------------
+|
+| Loading from here should make it available to any View files
+|
+*/
+
+require __DIR__."/../../vendor/erusev/parsedown/Parsedown.php";
