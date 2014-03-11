@@ -55,13 +55,11 @@ class PostsController extends \BaseController {
 	public function show($id)
 	{
 		$post = $this->post->findOrFail($id);
-		$title = $post->post_title;
 
 		$content = $this->post->parsePostContent();
 
 		return View::make('post.show')->with('post', $post)
-									  ->with('content', $content)
-									  ->with('title', $title);
+									  ->with('content', $content);
 	}
 
 	/**
