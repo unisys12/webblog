@@ -14,9 +14,7 @@ Blog
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		 <?php foreach( (array) $post->post_content as $content)
-			echo Parsedown::instance()->parse( substr($content, 0, 500) )
-		 ?>
+		 {{ substr($content, 0, 500) }}
 	</article>
 	<section class="post_tags">
 		<small> {{ $post->post_tags }} </small>

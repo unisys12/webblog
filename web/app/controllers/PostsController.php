@@ -56,7 +56,7 @@ class PostsController extends \BaseController {
 	{
 		$post = $this->post->findOrFail($id);
 
-		$content = Parsedown::instance()->parse($post->post_content);
+		$content = Post::parsePostContent();
 
 		return View::make('post.show')->with('post', $post)
 									  ->with('content', $content)
