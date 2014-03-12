@@ -20,6 +20,9 @@
 		font-family: 'open_sansregular';
 		padding-right: 1em;
 		@include small-nav;
+		&:active {
+			background: linear-gradient(#EEE, #BBB, #EEE);
+		}
 	}
 
 	nav > ul {
@@ -71,6 +74,7 @@
 	margin: 0 auto;
 	padding: 15px;
 	color: $text;
+	text-align: justify;
 	background-color: lightgray;
 	@include post_links;
 	border: 1px solid rgba(0,0,0,0.3);
@@ -81,6 +85,14 @@
 .post_tags {
 	@extend .post_desc;
 	margin-bottom: 3.5em;
+}
+
+.page_content {
+	@extend .posts;
+	padding-right: .5em;
+	p {
+		text-align: justify;
+	}
 }
 
 .adds {
