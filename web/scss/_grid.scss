@@ -1,6 +1,6 @@
 * {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -15,9 +15,7 @@
   }
 }
 
-/* Desktop Grid
- ***************/
-
+// Desktop Grid
 .grid {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -33,8 +31,7 @@
 	width: 33%;
 }
 
-/* Mobile Grid
- **************/
+// Mobile Grid
 .mobile-grid {
 	max-width: 100%;
 	margin: 0 auto;

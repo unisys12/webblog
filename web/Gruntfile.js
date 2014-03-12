@@ -12,8 +12,10 @@ module.exports = function(grunt){
 			    src: ['*.scss'],
 			    dest: 'public/css',
 			    ext: '.css',
-			    style: 'compact',
-			  }]
+			  }],
+			  options: {
+			  	style: 'compact'
+			  },
 			}
 		},
 		html: {
