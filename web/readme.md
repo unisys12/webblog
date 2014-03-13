@@ -1,21 +1,11 @@
-## Laravel PHP Framework
+## My Personal Blog
+This project was/is all about giving myself more experience in front-end and back-end development. It is currently hosted on an free tier over on OpenShift without a domain. The url of the project is blog-unisys12.rhcloud.com.
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework) [![License](https://poser.pugx.org/laravel/framework/license.png)](https://packagist.org/packages/laravel/framework) 
+## Tools Used
+The backend is built with Laravel 4.1 using a simple MySQL database v5.1. Although the standard .htaccess files are still in place, the project is actually using Nginx v1.5.8 and PHP_FPM. The config file can be found in .openshift/tmpl/nginx.conf.tmpl, so you can take a closer look. The version of PHP I am running on the server is 5.5.8.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+At this time there is basically not frontend code, as in JavaScript. Everything is done through the backend. This will change at some point. At that point, I will be using AngularJS. Haven't even started planning for that yet, so... The blog supports Markdown, which is saved to the database, then parsed at time of display. The markdown parser I am using is Parsedown, which is a really nice project!
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+All styling is done through SASS using a custom Grunt task (of course found in the root of the /web dir) to compile, concat and compress all the partials(which can be found in /web/scss/) into a single style.css file. I am using Normalize.css, but that's it. No css frameworks or grids, other than the custom mixins I created for grid like functions. I am using PrismJS for syntax highlighting, with the line numbers option along with just about all languages supported.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
-
-### Contributing To Laravel
-
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+####More to come as I move along with the project
