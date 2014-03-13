@@ -20,9 +20,6 @@
 		font-family: 'open_sansregular';
 		padding-right: 1em;
 		@include small-nav;
-		&:active {
-			background: linear-gradient(#EEE, #BBB, #EEE);
-		}
 	}
 
 	nav > ul {
