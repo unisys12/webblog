@@ -144,11 +144,11 @@
 	 	}
 	}
 
-	a > svg {
-		padding-right: 2.5em;
+	a > object {
+		margin-right: 1.0em;
 		@media screen and (max-width: 1150px){
-			padding-right: 1.0em;
-			margin-left: 1em;
+			//padding-right: 1.0em;
+			//margin-left: 1em;
 		}
 		@media screen and (max-width: 1050px){
 			padding-right: .5em;
@@ -159,8 +159,7 @@
 			margin-left: .5em;
 		}
 		@media screen and (max-width: $medium-bp){
-			padding-right: 3.0em;
-			margin-left: .75em;
+			margin-left: 1em;
 		}
 		&:nth(last-child){
 			padding-right: 0;
@@ -168,20 +167,12 @@
 	}
 }
 
-.svg_mail {
-	@include svg_colorize(2, 80, 214, 1);
+.mail, .git, .twitter, .google{
+	@include svg_box(48px);
 }
 
-.svg_git {
-	@include svg_colorize(50, 50, 50, 1);
-}
-
-.svg_twitter {
-	@include svg_colorize(16, 121, 255, 1);
-}
-
-.svg_google {
-	@include svg_colorize(250, 5, 17, 1);
+.google:hover {
+	@include svg_colorize(255,0,0,0.7);
 }
 
 .footer {

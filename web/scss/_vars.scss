@@ -104,11 +104,13 @@ $large-bp: 900px;
 	box-shadow: 1px 2px 5px $color;
 }
 
+@mixin svg-box($wh){
+	max-width: $wh;
+	max-height: $wh;
+}
+
 @mixin svg_colorize($red, $green, $blue, $alpha) {
 	fill: rgba($red, $green, $blue, $alpha);
-	&:hover {
-		fill: rgba($red, $green, $blue, $alpha - .2);
-	}
 }
 
 @mixin input-shadows($set:'', $color:rgba(0,0,220,0.2)){
