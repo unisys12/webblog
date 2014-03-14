@@ -141,14 +141,14 @@
 	 	}
 	}
 
-	a > object {
-		margin-right: 1.0em;
+	a > svg {
+		margin-right: 2.5em;
 		@media screen and (max-width: 1150px){
 			//padding-right: 1.0em;
 			//margin-left: 1em;
 		}
 		@media screen and (max-width: 1050px){
-			padding-right: .5em;
+			padding-right: 2em;
 			margin-left: .75em;
 		}
 		@media screen and (max-width: 950px){
@@ -156,7 +156,7 @@
 			margin-left: .5em;
 		}
 		@media screen and (max-width: $medium-bp){
-			margin-left: 1em;
+			margin-left: .5em;
 		}
 		&:nth(last-child){
 			padding-right: 0;
@@ -164,12 +164,32 @@
 	}
 }
 
-.mail, .git, .twitter, .google{
-	@include svg_box(48px);
+.google {
+	@include svg_colorize(255,10,0,1);
+	&:hover{
+		@include svg_colorize(255,0,0,0.9);
+	}
 }
 
-.google:hover {
-	@include svg_colorize(255,0,0,0.7);
+.twitter {
+	@include svg_colorize(20,90,255,1);
+	&:hover {
+		@include svg_colorize(20,90,255,0.9);
+	}
+}
+
+.github {
+	@include svg_colorize(0,0,0,1);
+	&:hover {
+		@include svg_colorize(0,0,0,0.9);
+	}
+}
+
+.mail {
+	@include svg_colorize(10,50,20,1);
+	&:hover {
+		@include svg_colorize(10,50,20,0.9);
+	}
 }
 
 .footer {
