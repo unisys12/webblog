@@ -6,7 +6,7 @@ New Post
 
 @section('content')
 {{ Form::open(array('route' => 'posts.store')) }}
-<ul>
+<ul class="post_form">
 <li>{{ Form::label('post_title', 'Post Title') }}</li>
 <li>{{ Form::text('post_title') }}</li>
 

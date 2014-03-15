@@ -1,0 +1,38 @@
+.post_form {
+
+	input[type='text'], textarea{
+
+		border-radius: .25em;
+
+		@media screen and (max-width: $small-bp){
+			width: 5em;
+		}
+
+		@media screen and (min-width: $medium-bp){
+			width: 25em;
+		}
+
+		@media screen and (min-width: $large-bp){
+			width: 50em;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	input[type='text'] {
+		height: 2em;
+		@media screen and (max-width: $small-bp){
+			height: auto;
+		}
+	}
+
+	textarea {
+
+		padding: 1em;
+		text-align: justify;
+
+	}
+
+}
