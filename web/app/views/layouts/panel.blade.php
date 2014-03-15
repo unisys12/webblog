@@ -31,8 +31,8 @@
 			<!-- Work Area Options and Navigation -->
 			<nav class="aside">
 				<ul>
-					<li><a href="#">This is</a></li>
-					<li><a href="#">a menu for</a></li>
+					<li><a href="{{ url('posts/create') }}">New Post</a></li>
+					<li><a href="{{ url('page/create') }}">New Page</a></li>
 					<li><a href="#">the admin panel</a></li>
 				</ul>
 				<hr>

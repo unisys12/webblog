@@ -7,7 +7,7 @@ Blog
 @section('content')
 
 {{ Form::open(array('url' => '/login')) }}
-<ul>
+<ul class="login">
 <li>{{ Form::label('username', 'Username:') }}</li>
 <li>{{ Form::text('username') }}</li>
 {{ $errors->first('username', '<span class="alert"> :message </span>') }}
