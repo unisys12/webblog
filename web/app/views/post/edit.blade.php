@@ -6,7 +6,7 @@ Edit Post
 
 @section('content')
 {{ Form::model($post, array('method' => 'put','route' => array('posts.update', $post->id))) }}
-<ul>
+<ul class="post_form">
 <li>{{ Form::label('post_title', 'Post Title') }}</li>
 <li>{{ Form::text('post_title') }}</li>
 
