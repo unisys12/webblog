@@ -25,8 +25,8 @@
 		@yield('content')
 		<aside class="adds">
 			<div class="search">
-				<form action="post">
-					<input type="search" placeholder="Doesn't Work!">
+				<form action="{{ route('search') }}" method="post">
+					<input type="search" name="search" placeholder="Doesn't Work!">
 					<button class="button">Search</button>
 				</form>
 			</div>

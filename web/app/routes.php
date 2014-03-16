@@ -13,14 +13,12 @@
 
 Route::get('/', 'HomeController@showIndex');
 
+Route::post('/search', array('uses' => 'PostsController@search', 'as' => 'search'));
+Route::get('/search', array('uses' => 'PostsController@search', 'as' => 'results'));
+
 Route::get('/about', function()
 {
 	return View::make('about');
-});
-
-Route::get('/upto', function()
-{
-	return View::make('up');
 });
 
 Route::get('/portfolio', function()

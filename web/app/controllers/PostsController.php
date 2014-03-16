@@ -5,8 +5,8 @@ class PostsController extends \BaseController {
 	public function __construct(Post $post)
 	{
 		$this->post = $post;
-		$this->beforeFilter('csrf', array('on' => 'post'));
-		$this->beforeFilter('auth', array('except' => 'show'));
+		$this->beforeFilter('csrf', array('on' => 'post', 'except' => 'search'));
+		$this->beforeFilter('auth', array('except' => 'show', 'except' => 'search'));
 	}
 
 	/**
@@ -106,6 +106,23 @@ class PostsController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  string  $tag
+	 * @return Response
+	 */
+	public function search()
+	{
+		// Find all posts with a given tag
+		$tags = Input::get('search');
+		$posts = $this->post->where('post_tags', '=', $tags)->get();
+
+		$content = $this->post->parsePostContent();
+
+		return View::make('post.search')->with('posts', $posts)->with('content', $content);
 	}
 
 }

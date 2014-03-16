@@ -23,9 +23,9 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-
+//var_dump($_SERVER['SERVER_NAME']); die();
 $env = $app->detectEnvironment(array(
-	'local' => array('PHILLIP-HP'),
+	'local' => array('localhost'),
 ));
 
 /*
