@@ -23,10 +23,10 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-//var_dump($_SERVER['SERVER_NAME']); die();
+
 $env = $app->detectEnvironment(function()
 {
-	return getenv('LARAVEL_ENV') ? : 'production';
+	return getenv('LARAVEL_ENV') ? : '';
 });
 
 /*

@@ -1,5 +1,5 @@
 bootstrap/compiled.php
-/bootstrap/start.php
+/web/bootstrap/start.php
 app/config/production
 composer.phar
 composer.lock
