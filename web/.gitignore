@@ -1,6 +1,6 @@
-/bootstrap/compiled.php
-web/bootstrap/start.php
-/app/config/production
+bootstrap/compiled.php
+/bootstrap/start.php
+app/config/production
 composer.phar
 composer.lock
 .env.local.php
