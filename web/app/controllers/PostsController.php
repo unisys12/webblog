@@ -6,7 +6,7 @@ class PostsController extends \BaseController {
 	{
 		$this->post = $post;
 		$this->beforeFilter('csrf', array('on' => 'post', 'except' => 'search'));
-		$this->beforeFilter('auth', array('except' => 'show', 'except' => 'search'));
+		$this->beforeFilter('auth', array('except' => 'show'));
 	}
 
 	/**
