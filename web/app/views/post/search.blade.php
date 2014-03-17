@@ -14,7 +14,7 @@ Search Results
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		 {{ substr($content, 0, 500) }}
+		 {{ substr($content, 0, 550) }}
 	</article>
 	<section class="post_tags">
 		<small> {{ $post->post_tags }} </small>
