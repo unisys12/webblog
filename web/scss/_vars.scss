@@ -63,6 +63,7 @@ $large-bp: 900px;
  	@media screen and (max-width: $medium-bp){
 		display: block;
 		max-width: 100%;
+		text-align: center;
 		background: linear-gradient(#EEE, #CCC, #EEE);
 		&:active {
 			background: linear-gradient(#EEE, #BBB, #EEE);
