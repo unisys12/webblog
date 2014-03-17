@@ -25,7 +25,6 @@
 				<ul>
 					<li> {{ link_to('', 'Blog Home') }} </li>
 					<li> {{ link_to('portfolio', 'Portfolio') }} </li>
-					<li> {{ link_to('upto', 'What Am I Up To?') }} </li>
 					<li> {{ link_to('about', 'About Me') }} </li>
 				</ul>
 			</nav>
