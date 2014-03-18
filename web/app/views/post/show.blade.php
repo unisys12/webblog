@@ -22,6 +22,9 @@
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'unisys12';
+        var disqus_identifier = '{{ $post->post_desc }}';
+	    var disqus_title = '{{ $post->post_title }}';
+	    var disqus_url = '{{ url("/posts/") }}$post->post_title';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
