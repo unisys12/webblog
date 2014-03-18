@@ -38,7 +38,17 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$data = Input::all();
+		// $data = Input::all();
+		$data = array(
+
+			'post_title'   => Input::get('post_title'),
+			'post_desc'    => Input::get('post_desc'),
+			'post_content' => Input::get('post_content'),
+			'post_author'  => 'Phillip Jackson',
+			'post_tags'    => Input::get('post_tags')
+
+
+		);
 		$post = Post::create($data);
 
 		if($post){

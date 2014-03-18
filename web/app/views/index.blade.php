@@ -14,7 +14,7 @@ Blog
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		 {{ substr($content, 0, 500) }}
+		 {{ Parsedown::instance()->parse(substr($post->post_content,0, 500)) }}
 	</article>
 	<section class="post_tags">
 		<small> {{ $post->post_tags }} </small>
