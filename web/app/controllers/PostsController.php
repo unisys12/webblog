@@ -59,17 +59,15 @@ class PostsController extends \BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  string  $post_title
 	 * @return Response
 	 */
 	public function show($id)
 	{
+		//$post = Post::where('post_title', $post_title)->first();
+		//dd($post);
 		$post = $this->post->findOrFail($id);
-
-		$content = $this->post->parsePostContent();
-
-		return View::make('post.show')->with('post', $post)
-									  ->with('content', $content);
+		return View::make('post.show')->with('post', $post);
 	}
 
 	/**

@@ -1,7 +1,7 @@
 @extends('layouts.post')
 
 @section('title')
-{{ $post->post_title }}
+  {{ $post->post_title }}
 @stop
 
 @section('content')
@@ -13,7 +13,7 @@
 		<h5 class="post_desc">{{ $post->post_desc }}</h5>
 	</header>
 	<article class="post_content">
-		{{ $content }}
+		{{ Parsedown::instance()->parse($post->post_content) }}
 	</article>
 	<section class="post_details">
 		<small> {{ $post->post_tags }} </small>
@@ -24,7 +24,7 @@
         var disqus_shortname = 'unisys12';
         var disqus_identifier = '{{ $post->post_desc }}';
 	    var disqus_title = '{{ $post->post_title }}';
-	    var disqus_url = '{{ url("/posts/") }}$post->post_title';
+	    var disqus_url = '{{ url("/posts/") }}$post->id';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
