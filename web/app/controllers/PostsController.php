@@ -6,7 +6,12 @@ class PostsController extends \BaseController {
 	{
 		$this->post = $post;
 		$this->beforeFilter('csrf', array('on' => 'post', 'except' => 'search'));
-		$this->beforeFilter('auth', array('except' => 'show'));
+		$this->beforeFilter('auth', array('except' => 'show', 'except' => 'search'));
+
+		Event::listen('illuminate.query', function($query)
+		{
+		    var_dump($query);
+		});
 	}
 
 	/**
@@ -126,11 +131,10 @@ class PostsController extends \BaseController {
 	{
 		// Find all posts with a given tag
 		$tags = Input::get('search');
-		$posts = $this->post->where('post_tags', '=', $tags)->get();
 
-		$content = $this->post->parsePostContent();
+		$posts = $this->post->where('post_tags', 'like', "%$tags%")->get();
 
-		return View::make('post.search')->with('posts', $posts)->with('content', $content);
+		return View::make('post.search')->with('posts', $posts);
 	}
 
 }
