@@ -7,11 +7,6 @@ class PostsController extends \BaseController {
 		$this->post = $post;
 		$this->beforeFilter('csrf', array('on' => 'post', 'except' => 'search'));
 		$this->beforeFilter('auth', array('except' => 'show', 'except' => 'search'));
-
-		Event::listen('illuminate.query', function($query)
-		{
-		    var_dump($query);
-		});
 	}
 
 	/**
