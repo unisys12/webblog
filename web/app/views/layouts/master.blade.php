@@ -2,7 +2,7 @@
 <html lang=en>
 <head>
 <meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Unisys12 - @yield('title')</title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
