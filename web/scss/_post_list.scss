@@ -1,0 +1,17 @@
+.post_list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	p {
+		font-size: 1em;
+	}
+}
+
+div[class^="post-"] > p{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: .75em;
+}
+

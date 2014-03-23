@@ -54,10 +54,16 @@ Route::post('/login', function()
 
 	if(Auth::attempt($data))
 	{
-		return Redirect::intended('user.profile');
+		return Redirect::intended('admin');
 	}
 
 	return Redirect::to('/login')->with('message', 'Username and Password do not match');
 });
 
 Route::resource('posts', 'PostsController');
+
+Route::get('/admin', array('as' => 'admin', 'before' => 'auth', function()
+{
+	$posts = Post::all();
+	return View::make('admin.panel')->with('posts', $posts);
+}));

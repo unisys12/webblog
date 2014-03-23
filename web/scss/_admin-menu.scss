@@ -1,0 +1,12 @@
+.menu {
+	padding-right: 1em;
+
+	margin-right: 1em;
+	li {
+		list-style-type: none;
+		padding-bottom: .5em;
+		nth:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
