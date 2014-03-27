@@ -9,7 +9,7 @@ class HomeController extends BaseController {
 
 	public function showIndex()
 	 {
-		$posts = Post::all();
+		$posts = Post::all()->sortByDesc('id');
 
 		return View::make('index')->with('posts', $posts);
    }

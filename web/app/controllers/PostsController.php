@@ -128,6 +128,7 @@ class PostsController extends \BaseController {
 		$tags = Input::get('search');
 
 		$posts = $this->post->where('post_tags', 'like', "%$tags%")->get();
+		$posts->sortByDesc('id');
 
 		return View::make('post.search')->with('posts', $posts);
 	}
