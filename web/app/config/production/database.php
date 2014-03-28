@@ -6,10 +6,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => $_ENV['OPENSHIFT_DIY_MYSQL_DB_HOST'],
+			'host'      => '127.7.111.130',
 			'database'  => 'blog_local',
-			'username'  => $_ENV['OPENSHIFT_DIY_MYSQL_DB_USERNAME'],
-			'password'  => $_ENV['OPENSHIFT_DIY_MYSQL_DB_PASSWORD'],
+			'username'  => 'adminiN2VAtr',
+			'password'  => 'e3bZA7iyrV5V',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
