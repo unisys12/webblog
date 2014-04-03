@@ -111,10 +111,6 @@ http {
             try_files $uri $uri/ @rewrites;
         }
 
-        location /nginx_stub_status {
-          stub_status on;
-        }
-
         location = /robots.txt  { access_log off; log_not_found off; }
 
         location ~ /\.          { access_log off; log_not_found off; deny all; }
