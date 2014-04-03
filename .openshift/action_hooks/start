@@ -14,7 +14,3 @@ ${OPENSHIFT_RUNTIME_DIR}/nginx/sbin/nginx
 
 echo "Starting php-fpm."
 ${OPENSHIFT_RUNTIME_DIR}/php5/sbin/php-fpm
-
-cd ${OPENSHIFT_DATA_DIR}
-source newrelic/bin/activate
-newrelic_plugin_agent -c newrelic_plugin_agent.cfg
