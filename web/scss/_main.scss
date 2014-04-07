@@ -77,18 +77,6 @@
 	border: 1px solid rgba(0,0,0,0.3);
 	@include box-shadow();
 	border-radius: 3px;
-	img {
-		width: 950px;
-		height: auto;
-		max-width: 950px;
-		min-width: 250px;
-		@media screen and (max-width: $medium-bp ){
-			max-width: 400px;
-		}
-		@media screen and (max-width: $small-bp) {
-			max-width: 250px;
-		}
-	}
 }
 
 .post_tags {
