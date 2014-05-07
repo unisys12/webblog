@@ -17,7 +17,7 @@ Blog
 		 {{ Parsedown::instance()->parse(substr($post->post_content,0, 500)) }}
 	</article>
 	<section class="post_tags">
-		<small> {{ $post->post_tags }} </small>
+		<small> {{ strtoupper($post->post_tags) }} </small>
 	</section>
 	@endforeach
 </main>
