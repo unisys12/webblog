@@ -1,0 +1,112 @@
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin mobile-grid {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+// Media Query Mixins
+ @mixin small-content {
+	@media screen and (max-width: "$medium-bp"){
+		@incldue mobile-grid;
+		width: 100%;
+		float: none;
+
+		.post_title {
+			margin-bottom: 0;
+		}
+	}
+ }
+
+ @mixin medium-aside {
+ 	@media screen and (max-width: "$medium-bp"){
+ 		@include mobile-grid;
+ 		float: none;
+ 		width: 100%;
+ 	}
+ }
+
+ @mixin search-button {
+ 	@media screen and (max-width: "$max-width"){
+		margin-top: .25em;
+		width: 100%;
+	}
+ }
+
+ @mixin search-field {
+ 	@media screen and (max-width: "$max-width"){
+		margin: 0 auto;
+		width: 100%;
+	}
+ }
+
+ @mixin small-nav {
+ 	@media screen and (max-width: "$medium-bp"){
+		display: block;
+		max-width: 100%;
+		text-align: center;
+		background: linear-gradient(#EEE, #CCC, #EEE);
+		&:active {
+			background: linear-gradient(#EEE, #BBB, #EEE);
+		}
+		padding: 0.5em 0;
+		margin: .25em auto;
+		a {
+			color: $text;
+			padding-left: .25em;
+		}
+		border: 1px solid rgba(0,0,0,0.3);
+ 	}
+ }
+
+ // General Styling Mixins
+
+@mixin gen_links {
+	a {
+		color: $text;
+		text-decoration: none;
+		//text-shadow: 1px 1px 2px complement($text);
+		&:hover {
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+		}
+	}
+}
+
+@mixin post_links {
+	a {
+		color: lighten($text, 30%);
+		text-decoration: none;
+		&:hover {
+			color: $link_hover;
+		}
+		&:active {
+			color: $link_active;
+		}
+	}
+}
+
+@mixin box-shadow($color:rgba(0,0,0,0.5)){
+	box-shadow: 1px 2px 5px $color;
+}
+
+@mixin svg-box($wh){
+	max-width: $wh;
+	max-height: $wh;
+}
+
+@mixin svg_colorize($red, $green, $blue, $alpha) {
+	fill: rgba($red, $green, $blue, $alpha);
+}
+
+@mixin input-shadows($set:'', $color:rgba(0,0,220,0.2)){
+	box-shadow: inset -1px -1px 3px $color;
+}
