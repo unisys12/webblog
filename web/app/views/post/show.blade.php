@@ -16,7 +16,7 @@
 		{{ Parsedown::instance()->parse($post->post_content) }}
 	</article>
 	<section class="post_details">
-		<small> {{ $post->post_tags }} </small>
+		<small> {{ strtoupper($post->post_tags) }} </small>
 	</section>
 	<div id="disqus_thread"></div>
     <script type="text/javascript">
