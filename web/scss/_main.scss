@@ -171,28 +171,32 @@
 .google {
 	@include svg_colorize(255,10,0,1);
 	&:hover{
-		@include svg_colorize(255,0,0,0.9);
+		@include svg_colorize(255,0,0,0.8);
+		transition: fill 0.3s;
 	}
 }
 
 .twitter {
 	@include svg_colorize(20,90,255,1);
 	&:hover {
-		@include svg_colorize(20,90,255,0.9);
+		@include svg_colorize(20,90,255,0.8);
+		transition: fill 0.3s;
 	}
 }
 
 .github {
 	@include svg_colorize(0,0,0,1);
 	&:hover {
-		@include svg_colorize(0,0,0,0.9);
+		@include svg_colorize(0,0,0,0.8);
+		transition: fill 0.3s;
 	}
 }
 
 .mail {
 	@include svg_colorize(10,50,20,1);
 	&:hover {
-		@include svg_colorize(10,50,20,0.9);
+		@include svg_colorize(10,50,20,0.8);
+		transition: fill 0.3s;
 	}
 }
 
