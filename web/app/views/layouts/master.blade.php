@@ -34,7 +34,7 @@
 		<aside class="adds">
 			<div class="search">
 				<form action="{{ route('search') }}" method="post">
-					<input type="search" name="search" placeholder="Doesn't Work!">
+					<input type="search" name="search" placeholder="Search by Post Tag!">
 					<button class="button">Search</button>
 				</form>
 			</div>
