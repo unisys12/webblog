@@ -66,9 +66,9 @@ Unisys12 Admin Panel
 	<div class="post-edit">
 		<h6>Edit Post</h6>
 		<?php $num = count($posts) ?>
-		@for($i = 0; $i < $num; $i++)
+		@for($i = 1; $i <= $num; $i++)
 			<p>
-				<a href="{{ url('/posts') }}{{ '/' .$item->id. '/edit' }}" title="">Edit</a>
+				<a href="{{ url('/posts') }}{{ '/' .$i. '/edit' }}" title="">Edit</a>
 			</p>
 		@endfor
 	</div>
