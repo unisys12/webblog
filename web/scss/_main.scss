@@ -146,6 +146,7 @@
 	}
 
 	a > svg {
+		-webkit-transition: transform 2s;
 		margin-right: 2.5em;
 		@media screen and (max-width: 1150px){
 			//padding-right: 1.0em;
@@ -164,6 +165,17 @@
 		}
 		&:nth(last-child){
 			padding-right: 0;
+		}
+
+		&:hover {
+			-webkit-transform: rotateY(45deg);
+			-webkit-transform-origin: 60% 100%;
+			-moz-transform: rotateY(45deg);
+			-moz-transform-origin: 60% 100%;
+			-ms-transform: rotateY(45deg);
+			-ms-transform-origin: 60% 100%;
+			transform: rotateY(45deg);
+			transform-origin: 60% 100%;
 		}
 	}
 }
