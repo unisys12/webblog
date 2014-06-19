@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'blog_local',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => '123',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

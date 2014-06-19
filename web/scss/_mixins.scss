@@ -16,7 +16,7 @@
 
 // Media Query Mixins
  @mixin small-content {
-	@media screen and (max-width: "$medium-bp"){
+	@media screen and (max-width: $medium-bp){
 		@incldue mobile-grid;
 		width: 100%;
 		float: none;
@@ -28,7 +28,7 @@
  }
 
  @mixin medium-aside {
- 	@media screen and (max-width: "$medium-bp"){
+ 	@media screen and (max-width: $medium-bp){
  		@include mobile-grid;
  		float: none;
  		width: 100%;
@@ -36,21 +36,21 @@
  }
 
  @mixin search-button {
- 	@media screen and (max-width: "$max-width"){
+ 	@media screen and (max-width: $max-width){
 		margin-top: .25em;
 		width: 100%;
 	}
  }
 
  @mixin search-field {
- 	@media screen and (max-width: "$max-width"){
+ 	@media screen and (max-width: $max-width){
 		margin: 0 auto;
 		width: 100%;
 	}
  }
 
  @mixin small-nav {
- 	@media screen and (max-width: "$medium-bp"){
+ 	@media screen and (max-width: $medium-bp){
 		display: block;
 		max-width: 100%;
 		text-align: center;

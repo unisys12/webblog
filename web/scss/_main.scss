@@ -3,7 +3,7 @@
 	padding: 0 3em 3em 3em;
 	margin: 0 auto;
 	opacity: .9;
-	max-width: "$max-width";
+	max-width: $max-width;
 }
 
 .topbar {
@@ -59,7 +59,7 @@
 
 .post_desc{
 	font-family: 'news_cyclebold', sans-serif;
-	@media screen and (max-width: "$small-bp"){
+	@media screen and (max-width: $small-bp){
 		display: none;
 	}
 }
@@ -130,7 +130,7 @@
 		padding-left: 1em;
 	}
 
-	@media screen and (max-width: "$medium-bp"){
+	@media screen and (max-width: $medium-bp){
 		margin: 0 2.75em;
 	}
 
@@ -160,7 +160,7 @@
 			padding-right: .25em;
 			margin-left: .5em;
 		}
-		@media screen and (max-width: "$medium-bp"){
+		@media screen and (max-width: $medium-bp){
 			margin-left: .5em;
 		}
 		&:nth(last-child){
